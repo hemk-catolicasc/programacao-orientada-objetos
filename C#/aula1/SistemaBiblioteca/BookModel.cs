@@ -18,5 +18,15 @@ namespace LibrarySystem
 
 
         // Operations - Methods
+        // Make this attributes required when creating a new book
+        public BookModel(string title, string isbm, string author, string genre, int pages)
+        {
+            this.title = title;
+            this.isbm = isbm;
+            this.author = author;
+            this.genre = genre;
+            this.pages = pages;
+            this.borrowed = false; // Default value for borrowed
+        }
     }
 }

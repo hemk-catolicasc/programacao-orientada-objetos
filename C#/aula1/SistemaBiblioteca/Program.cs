@@ -12,9 +12,9 @@ namespace LibrarySystem
         {
 
             BookModel book1;
-            book1 = new BookModel();
+            book1 = new BookModel("title", "isbm", "author", "genre", 1000);
 
-            BookModel book2 = new BookModel();
+            BookModel book2 = new BookModel("title", "isbm", "author", "genre", 999);
 
             book1.title = "Java Development";
             book1.isbm = "123456789";
