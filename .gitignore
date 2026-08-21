@@ -1,3 +1,13 @@
+# Build
 bin/
 obj/
+
+# JetBrains Rider
 .idea/
+*.sln.iml
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userprefs
