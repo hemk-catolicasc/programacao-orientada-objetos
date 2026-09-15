@@ -61,29 +61,29 @@ internal class Screen
         for (column = initColumn; column <= finalColumn; column++)
         {
             Console.SetCursorPosition(column, initLine);
-            Console.Write("="); //205
+            Console.Write("═"); //205
             Console.SetCursorPosition(column, finalLine);
-            Console.Write("="); //205
+            Console.Write("═"); //205
         }
         
         // vertical lines
         for (line = initLine; line <= finalLine; line++)
         {
             Console.SetCursorPosition(initColumn, line);
-            Console.Write("||"); //106
+            Console.Write("║"); //186
             Console.SetCursorPosition(finalColumn, line);
-            Console.Write("||"); //106
+            Console.Write("║"); //186
         }
         
         // corners
         Console.SetCursorPosition(initColumn, initLine);
-        Console.Write("||");  //201
+        Console.Write("╔");  //201
         Console.SetCursorPosition(initColumn, finalLine);
-        Console.Write("||"); //200
+        Console.Write("╚"); //200
         Console.SetCursorPosition(finalColumn, initLine);
-        Console.Write("||"); //187
+        Console.Write("╗"); //187
         Console.SetCursorPosition(finalColumn, finalLine);
-        Console.Write("||"); //188
+        Console.Write("╝"); //188
     }
 
     public void ScreenSetup()
