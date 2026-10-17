@@ -73,7 +73,7 @@ namespace Biblioteca
                     //pergunta se confirma o cadastro
                     resp = view.Perguntar("Confirma o cadastro (S/N) : ");
                     //se SIM
-                    if(resp == "s")
+                    if(resp == "S")
                     {
                         //adiciona o novo aluno à coleção
                         this._colecaoAlunos.Add(aluno);
