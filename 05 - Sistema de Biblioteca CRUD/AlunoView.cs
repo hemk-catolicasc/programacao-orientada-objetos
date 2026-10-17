@@ -64,27 +64,57 @@ namespace Biblioteca
         }
 
 
-        public AlunoModel EntrarDados(string qual)
+        public AlunoModel EntrarDados(string qual, AlunoModel aluno)
         {
-            AlunoModel obj = new AlunoModel();
-
-
             if (qual == "PK")
             {
                 // pergunta a chave primária (código)
                 Console.SetCursorPosition(this._colDados, this._linDados);
-                obj.Matricula = Console.ReadLine();
+                aluno.Matricula = Console.ReadLine();
             }
-            else
+            else if(qual == "DT")
             {
-                //
+                Tela t = new Tela();
+                t.LimparArea(this._colDados, this._linDados+1,this._colFin-1,this._linFin-2);
+                
                 // pergunta todos os outros dados
-                //
+                Console.SetCursorPosition(this._colDados, this._linDados +1);
+                aluno.Nome = Console.ReadLine();
+                
+                Console.SetCursorPosition(this._colDados, this._linDados +2);
+                aluno.Email = Console.ReadLine();
+                
+                Console.SetCursorPosition(this._colDados, this._linDados + 3);
+                aluno.Telefone = Console.ReadLine();
             }
 
-            return obj;
+            return aluno;
+        }
+        
+        
+        
+        
+        public string Perguntar(string pergunta)
+        {
+            string resposta = "";
+            
+            Console.SetCursorPosition(this._colIni + 1, this._linFin - 1);
+            Console.Write(pergunta);
+            resposta = Console.ReadLine();
+
+            return resposta.ToUpper();
         }
 
-
+        public void MostrarDados(AlunoModel aluno)
+        {
+            Console.SetCursorPosition(this._colDados, this._linDados + 1);
+            Console.Write(aluno.Nome);
+            
+            Console.SetCursorPosition(this._colDados, this._linDados + 2);
+            Console.Write(aluno.Email);
+            
+            Console.SetCursorPosition(this._colDados, this._linDados + 3);
+            Console.Write(aluno.Telefone);
+        }
     }
 }
